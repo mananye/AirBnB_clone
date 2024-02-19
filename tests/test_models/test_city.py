@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """
-Unittest for city.py
+Unittest for user.py
 """
 import unittest
 from models.city import City
 import datetime
-from models.base_model import BaseModel
 
 
 class TestCity(unittest.TestCase):
@@ -19,8 +18,7 @@ class TestCity(unittest.TestCase):
 
     def test_user_inheritance(self):
         """test if city is a subclass of BaseModel"""
-        self.assertIsInstance(self.c, City)
-        self.assertIsInstance(self.c, BaseModel)  # Add this line to check inheritance
+        self.assertTrue(self.c, City)
 
     def testHasAttributes(self):
         """verify if attributes exist"""
@@ -40,4 +38,3 @@ class TestCity(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

@@ -1,9 +1,14 @@
+#!/usr/bin/python3
+"""
+Unittest for place.py
+"""
 import unittest
 from models.place import Place
 import datetime
 
+
 class TestPlace(unittest.TestCase):
-    """Tests instances and methods from Place class"""
+    """Tests instances and methods from amenity class"""
 
     p = Place()
 
@@ -51,4 +56,3 @@ class TestPlace(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-

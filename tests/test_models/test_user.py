@@ -7,7 +7,7 @@ from models.user import User
 import datetime
 
 
-class TestUser(unittest.TestCase):
+class UserCase(unittest.TestCase):
     """Tests instances and methods from user class"""
 
     u = User()
@@ -42,4 +42,3 @@ class TestUser(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
