@@ -190,11 +190,12 @@ class HBNBCommand(cmd.Cmd):
         obj = objdict["{}.{}".format(argl[0], argl[1])]
 
         if len(argl) == 4:
-            setattr(obj, argl[2], argl[3])  # Update single attribute
-        elif len(argl) == 3 and type(eval(argl[2])) == dict:
+   	    setattr(obj, argl[2], argl[3])  
+	elif len(argl) == 3 and isinstance(eval(argl[2]), dict):
             for k, v in eval(argl[2]).items():
-                setattr(obj, k, v)  # Update multiple attributes using a dictionary
-        HBNBCommand.storage.save()  # Save changes
+        setattr(obj, k, v)
+
+        HBNBCommand.storage.save()  
 
 
 if __name__ == "__main__":
