@@ -21,7 +21,7 @@ class TestState(unittest.TestCase):
         """test if State is a subclass of BaseModel"""
         self.assertIsInstance(self.s, State)
 
-    def testHasAttributes(self):
+    def test_has_attributes(self):
         """verify if attributes exist"""
         self.assertTrue(hasattr(self.s, 'name'))
         self.assertTrue(hasattr(self.s, 'id'))
@@ -35,5 +35,7 @@ class TestState(unittest.TestCase):
         self.assertIsInstance(self.s.created_at, datetime.datetime)
         self.assertIsInstance(self.s.updated_at, datetime.datetime)
 
+
 if __name__ == '__main__':
     unittest.main()
+

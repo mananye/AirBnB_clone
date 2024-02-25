@@ -13,15 +13,15 @@ class TestPlace(unittest.TestCase):
     p = Place()
 
     def test_class_exists(self):
-        """tests if class exists"""
+        """Tests if class exists"""
         self.assertEqual(str(type(self.p)), "<class 'models.place.Place'>")
 
     def test_user_inheritance(self):
-        """test if Place is a subclass of BaseModel"""
+        """Test if Place is a subclass of BaseModel"""
         self.assertIsInstance(self.p, Place)
 
-    def testHasAttributes(self):
-        """verify if attributes exist"""
+    def test_has_attributes(self):
+        """Verify if attributes exist"""
         self.assertTrue(hasattr(self.p, 'city_id'))
         self.assertTrue(hasattr(self.p, 'user_id'))
         self.assertTrue(hasattr(self.p, 'name'))
@@ -38,7 +38,7 @@ class TestPlace(unittest.TestCase):
         self.assertTrue(hasattr(self.p, 'updated_at'))
 
     def test_types(self):
-        """tests if the type of the attribute is the correct one"""
+        """Tests if the type of the attribute is the correct one"""
         self.assertIsInstance(self.p.city_id, str)
         self.assertIsInstance(self.p.user_id, str)
         self.assertIsInstance(self.p.name, str)
@@ -54,5 +54,7 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(self.p.created_at, datetime.datetime)
         self.assertIsInstance(self.p.updated_at, datetime.datetime)
 
+
 if __name__ == '__main__':
     unittest.main()
+
